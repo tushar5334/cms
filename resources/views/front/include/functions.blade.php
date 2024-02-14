@@ -1,0 +1,4 @@
+{{-- AJAX Message --}}
+<script>
+
+</script>

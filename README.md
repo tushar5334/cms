@@ -47,6 +47,10 @@ Install project dependencies
 composer install
 ```
 
+```sh
+php artisan key:generate
+```
+
 Migrate database
 
 ```sh
@@ -82,6 +86,12 @@ To make queue in working condition execute below command.
 
 ```sh
 php artisan queue:work
+```
+
+To make queue in working in background even if terminal is closed.
+
+```sh
+nohup php artisan queue:work --daemon &
 ```
 
 Server project to localhost

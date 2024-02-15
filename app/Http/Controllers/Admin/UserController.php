@@ -102,6 +102,7 @@ class UserController extends Controller
             $requestData = $request->validated();
             $requestData['created_by'] = Auth::guard('admin')->id();
             $requestData['user_type'] = 'User';
+
             if ($request->hasFile('profile_picture')) {
                 $fileData = $imageService->handleFileUpload('user_images', $request->file('profile_picture'), '', 'public');
                 $requestData['profile_picture'] = $fileData;

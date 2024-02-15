@@ -180,7 +180,6 @@ class UserController extends Controller
             } else {
                 unset($requestData['password']);
             }
-
             unset($requestData['confirm_password']);
 
             DB::transaction(function () use ($requestData, $user) {
